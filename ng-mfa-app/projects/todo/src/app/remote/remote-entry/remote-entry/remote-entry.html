@@ -1,0 +1,26 @@
+<h2>Todo Microfrontend ✅</h2>
+<p>This is loaded from the remote app (todo).</p>
+
+<div style="margin-top:16px; max-width: 520px;">
+  <div style="display:flex; gap:8px;">
+    <input
+      [(ngModel)]="newTodo"
+      placeholder="Add a todo..."
+      style="flex:1; padding:8px;"
+      (keydown.enter)="add()"
+    />
+    <button (click)="add()" style="padding:8px 12px;">Add</button>
+  </div>
+
+  <ul style="margin-top:16px; padding-left: 18px;">
+    <li *ngFor="let item of todo.getAll()" style="margin: 8px 0;">
+      <label style="cursor:pointer;">
+        <input type="checkbox" [checked]="item.done" (change)="toggle(item)" />
+        <span [style.textDecoration]="item.done ? 'line-through' : 'none'">
+          {{ item.text }}
+        </span>
+      </label>
+      <button (click)="remove(item)" style="margin-left:10px;">✕</button>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,17 @@
+<!--<p>context works!</p>-->
+
+<h2>Shell Context Sender</h2>
+
+<label>
+  Username:
+  <input [(ngModel)]="user" style="margin-left:8px; padding:6px;" />
+</label>
+
+<div style="margin-top:12px; display:flex; gap:10px;">
+  <button (click)="sendToRemote()">Send to Todo (event)</button>
+  <button (click)="openTodo()">Open /todo with query param</button>
+</div>
+
+<p style="margin-top:12px;">
+  Current user: <b>{{ user }}</b>
+</p>

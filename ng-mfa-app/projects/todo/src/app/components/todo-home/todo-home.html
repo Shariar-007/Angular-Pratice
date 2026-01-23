@@ -1,0 +1,8 @@
+<!--<p>todo-home works!</p>-->
+<h2>Todo Remote Home ✅</h2>
+
+<p>
+  Username from Shell: <b>{{ user || '(none)' }}</b>
+</p>
+
+<a [routerLink]="['/todo/settings']" [queryParams]="{ user: user }">Go Settings</a>
