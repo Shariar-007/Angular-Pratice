@@ -3,6 +3,7 @@ import { loadRemoteModule } from '@angular-architects/module-federation';
 import {HomeComponent} from './pages/home/home';
 import {AboutComponent} from './pages/about/about';
 import {ContextComponent} from './pages/context/context';
+import {App} from '../../../todo/src/app/app';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },

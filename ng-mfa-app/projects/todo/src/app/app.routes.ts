@@ -6,3 +6,4 @@ export const routes: Routes = [
   { path: '', component: TodoHome },
   { path: 'settings', component: TodoSettings },
 ];
+

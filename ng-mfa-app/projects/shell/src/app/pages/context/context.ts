@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {Router} from '@angular/router';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
+import {AppContextService} from '../../../../../shared-lib/src/lib/services/app-context.service';
 
 @Component({
   selector: 'app-shell-context',
@@ -13,7 +14,7 @@ import {FormsModule} from '@angular/forms';
 export class ContextComponent {
   user = 'Shariar';
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private ctx: AppContextService) {}
 
   sendToRemote() {
     window.dispatchEvent(
@@ -23,5 +24,9 @@ export class ContextComponent {
 
   openTodo() {
     this.router.navigate(['/todo'], { queryParams: { user: this.user } });
+  }
+
+  apply() {
+    this.ctx.setUser(this.user);
   }
 }
