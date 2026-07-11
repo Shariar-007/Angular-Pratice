@@ -1,2 +1,4 @@
 <app-greeting-card [name]="userName" (countChange)=onCountChanged($event)></app-greeting-card>
 <p>Parent sees the count is: {{ latestCount }}</p>
+
+<app-user-card [username]="userName" [isOnline]="false" (greted)='onGreeted($event)'></app-user-card>

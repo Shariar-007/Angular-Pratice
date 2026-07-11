@@ -4,12 +4,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { GreetingCardComponent } from './greeting-card/greeting-card.component';
+import {UserCard} from './user-card/user-card.component';
+import {StatusBadge} from './user-card/status-badge/status-badge.component';
 
 
 @NgModule({
   declarations: [
     App,
     GreetingCardComponent,
+    UserCard,
+    StatusBadge
   ],
   imports: [
     BrowserModule,
