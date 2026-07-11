@@ -1,2 +1,9 @@
 <h2>Home</h2>
 <p>Welcome to the home page.</p>
+
+
+<p [appHighlight]="'lightblue'">Hover over me — I light up.</p>
+<p appHighlight>Hover me too — I default to yellow.</p>
+
+<button (click)="visible = !visible">Toggle</button>
+<p *appIf="visible">Now you see me (via our own structural directive!)</p>

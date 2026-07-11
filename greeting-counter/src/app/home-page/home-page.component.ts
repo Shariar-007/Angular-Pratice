@@ -8,4 +8,6 @@ import {Component} from '@angular/core';
   standalone: false
 })
 
-export class HomePageComponent{}
+export class HomePageComponent{
+  visible = true;
+}
