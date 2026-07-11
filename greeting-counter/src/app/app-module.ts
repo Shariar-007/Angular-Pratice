@@ -6,14 +6,17 @@ import { App } from './app';
 import { GreetingCardComponent } from './greeting-card/greeting-card.component';
 import {UserCard} from './user-card/user-card.component';
 import {StatusBadge} from './user-card/status-badge/status-badge.component';
-
+import { HomePageComponent } from './home-page/home-page.component';
+import { AboutPageComponent } from './about-page/about-page.component';
 
 @NgModule({
   declarations: [
     App,
     GreetingCardComponent,
     UserCard,
-    StatusBadge
+    StatusBadge,
+    HomePageComponent,
+    AboutPageComponent
   ],
   imports: [
     BrowserModule,
