@@ -10,6 +10,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { HighLightDirective } from './highlight.directive';
 import { AppIfDirective } from './appIf.directive';
+import { CounterDisplayComponent} from './counter-display/counter-display.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +20,9 @@ import { AppIfDirective } from './appIf.directive';
     StatusBadge,
     HomePageComponent,
     AboutPageComponent,
+    CounterDisplayComponent,
     HighLightDirective,
-    AppIfDirective
+    AppIfDirective,
   ],
   imports: [
     BrowserModule,
