@@ -1,4 +1,5 @@
-<p>The shared count is: {{ counterStateService.getCount() }}</p>
+<p>The shared count is: {{ counterStateService.count() }}</p>
+<p>Is it even? {{ counterStateService.isEven() }}</p>
 
 <button (click)="counterStateService.increment()">+1</button>
 <button (click)="counterStateService.reset()">Reset</button>

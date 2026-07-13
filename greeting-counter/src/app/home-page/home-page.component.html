@@ -3,7 +3,7 @@
 
 
 <p [appHighlight]="'lightblue'">Hover over me — I light up.</p>
-<p appHighlight>Hover me too — I default to yellow.</p>
+<p [appHighlight]="'yellow'">Hover me too — I default to yellow.</p>
 
 <button (click)="visible = !visible">Toggle</button>
 <p *appIf="visible">Now you see me (via our own structural directive!)</p>
