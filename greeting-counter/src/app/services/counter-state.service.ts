@@ -1,5 +1,5 @@
 
-import {Injectable, signal, computed} from '@angular/core';
+import {Injectable, signal, computed, effect} from '@angular/core';
 import { LoggerService } from './logger.service';
 
 @Injectable({
@@ -10,9 +10,14 @@ export class CounterStateService{
   // private count = 0;
   private countSignal = signal(0); // the reactive container
   readonly count = this.countSignal.asReadonly();
+
   readonly isEven = computed(() => this.countSignal() % 2 === 0);
 
-  constructor(private logger: LoggerService) {}   // ← injecting a service into a service
+  constructor(private logger: LoggerService) {
+    effect(()=>{
+      this.logger.log(`Count changed to ${this.countSignal()}`);
+    })
+  }   // ← injecting a service into a service
 
   // getCount(): number {
   //   return this.count;
@@ -30,12 +35,12 @@ export class CounterStateService{
 
   increment() {
     this.countSignal.update(c => c + 1);
-    this.logger.log(`Count incremented to ${this.countSignal()}`);
+    // this.logger.log(`Count incremented to ${this.countSignal()}`);
   }
 
   reset() {
     this.countSignal.set(0);
-    this.logger.log('Count reset');
+    // this.logger.log('Count reset');
   }
 
 }
