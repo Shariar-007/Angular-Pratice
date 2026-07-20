@@ -11,6 +11,8 @@ import { AboutPageComponent } from './about-page/about-page.component';
 import { HighLightDirective } from './highlight.directive';
 import { AppIfDirective } from './appIf.directive';
 import { CounterDisplayComponent} from './counter-display/counter-display.component';
+import { ProductComponent } from './product/product.component';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,10 +25,12 @@ import { CounterDisplayComponent} from './counter-display/counter-display.compon
     CounterDisplayComponent,
     HighLightDirective,
     AppIfDirective,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners()

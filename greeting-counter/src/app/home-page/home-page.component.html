@@ -9,3 +9,18 @@
 <p *appIf="visible">Now you see me (via our own structural directive!)</p>
 
 <app-counter-display></app-counter-display>
+
+<input
+  type="text"
+  placeholder="Search GitHub users..."
+  (input)="onInput($any($event.target).value)">
+
+<p *ngIf="loading">Loading...</p>
+
+<ul>
+  <li *ngFor="let user of results">
+    <img [src]="user.avatar_url" width="24" height="24"> {{ user.login }}
+  </li>
+</ul>
+
+<app-product></app-product>
