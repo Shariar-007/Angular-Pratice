@@ -13,11 +13,11 @@ import {of} from "rxjs";
 })
 
 export class HomePageComponent{
-onInput(arg0: any) {
-  console.log(arg0);
 
-// throw new Error('Method not implemented.');
-}
+  onInput(arg0: any) {
+    console.log(arg0);
+  // throw new Error('Method not implemented.');
+  }
   visible = true;
   private searchTerms = new Subject<string>();   // manually-fed stream of typed text
   results: any[] = [];

@@ -5,3 +5,17 @@
     {{ product }}
   </li>
 </ul>
+
+
+<p>Date: {{ today | date:'fullDate' }}</p>
+<p>Short date: {{ today | date:'shortTime' }}</p>
+<p>Price: {{ price | currency:'USD' }}</p>
+<p>Percent: {{ 0.256 | percent }}</p>
+<p>Uppercase: {{ message | uppercase }}</p>
+<p>Lowercase: {{ message | lowercase }}</p>
+<p>Rounded: {{ price | number:'1.0-0' }}</p>
+<p>Raw object: {{ user | json }}</p>
+<p>Sliced text: {{ message | slice:0:5 }}</p>
+<p>Chained: {{ message | lowercase | slice:0:5 }}</p>
+
+<p>{{ 'This is a fairly long sentence that should get cut off' | truncateNew:25 }}</p>

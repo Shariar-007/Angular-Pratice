@@ -13,6 +13,7 @@ import { AppIfDirective } from './appIf.directive';
 import { CounterDisplayComponent} from './counter-display/counter-display.component';
 import { ProductComponent } from './product/product.component';
 import { HttpClientModule} from '@angular/common/http';
+import { TruncateNewPipe} from './pipes/truncateNew.pipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HttpClientModule} from '@angular/common/http';
     CounterDisplayComponent,
     HighLightDirective,
     AppIfDirective,
-    ProductComponent
+    ProductComponent,
+    TruncateNewPipe
   ],
   imports: [
     BrowserModule,
