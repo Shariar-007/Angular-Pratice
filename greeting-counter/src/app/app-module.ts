@@ -15,7 +15,7 @@ import { ProductComponent } from './product/product.component';
 import { HttpClientModule} from '@angular/common/http';
 import { TruncateNewPipe} from './pipes/truncateNew.pipe';
 import { FormTemplateComponent} from './form-template/form-template.component';
-import {FormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,7 +36,8 @@ import {FormsModule} from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners()

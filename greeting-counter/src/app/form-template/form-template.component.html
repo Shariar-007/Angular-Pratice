@@ -5,7 +5,6 @@
 <label> Email: <input name="email" [(ngModel)]="model.email" required email #emailRef="ngModel"/></label>
 
 <div *ngIf="emailRef.invalid && emailRef.touched">Valid email required</div>
-<br/>
 <label>Password:
   <input name="password" type="password" [(ngModel)]="model.password" required minlength="6" #pwRef="ngModel">
 </label>
@@ -14,13 +13,28 @@
 </form>
 <p>================================</p>
 
+<h3>Reactive signup</h3>
+<form  [formGroup]="formReact" (ngSubmit)="onSubmitReactiveFrom()">
+  <label>
+    Email:
+    <input type="email" formControlName="email">
+  </label>
+  <div *ngIf="email?.invalid && email?.touched">Valid email required</div>
 
-<form #f="ngForm" (ngSubmit)="onSubmit(f)">
-  <label>Email: <input name="email" [(ngModel)]="model.email" required email #emailRef="ngModel"/> </label>
+  <label>
+    Password:
+    <input type="password" formControlName="password">
+  </label>
+  <div *ngIf="password?.invalid && password?.touched">Min 6 characters</div>
 
+  <label>
+    Confirm:
+    <input type="password" formControlName="confirm">
+  </label>
+  <div *ngIf="formReact.errors?.['passwordsMismatch'] && confirm?.touched">Passwords don't match</div>
+
+  <button type="submit" [disabled]="formReact.invalid">Sign up</button>
 </form>
-
-
 
 
 
