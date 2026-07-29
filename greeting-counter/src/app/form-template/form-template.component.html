@@ -1,0 +1,28 @@
+
+<p>=========Template Driven Form==========</p>
+<h3>Template-driven signup</h3>
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+<label> Email: <input name="email" [(ngModel)]="model.email" required email #emailRef="ngModel"/></label>
+
+<div *ngIf="emailRef.invalid && emailRef.touched">Valid email required</div>
+<br/>
+<label>Password:
+  <input name="password" type="password" [(ngModel)]="model.password" required minlength="6" #pwRef="ngModel">
+</label>
+<div *ngIf="pwRef.invalid && pwRef.touched">Min 6 characters</div>
+<button type="submit" [disabled]="f.invalid">Sign up</button>
+</form>
+<p>================================</p>
+
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+  <label>Email: <input name="email" [(ngModel)]="model.email" required email #emailRef="ngModel"/> </label>
+
+</form>
+
+
+
+
+
+
+<p>================================</p>
